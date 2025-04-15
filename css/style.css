@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bodyColor: #fff;
+  --primaryColor: #050b0a;
+  --btnColor: #00bc95;
+  --primaryFont: "Poppins", sans-serif;
+  --mainFontColor: #ffffff;
+  --secondaryFontColor: #e1dcdc;
+  --colorBlack: #000000;
+  --colorWhite: #fff;
+  --subtitleColor: #000000d0;
+  --paragraphTextColor: #000;
+  --theme: #f58139;
+}
+::selection {
+  background-color: var(--theme);
+  color: var(--colorWhite);
+}
+
+/* Navigation Section Start */
+.navbar {
+  background-color: var(--theme);
+  padding: 20px 0;
+}
+a {
+  text-decoration: none;
+  color: var(--colorWhite) !important;
+}
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0 8px;
+  list-style: none;
+}
+
+/* Navigation Section Start  */
+.nav-link {
+  color: var(--secondaryFontColor) !important;
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--mainFontColor) !important;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #5e5b5b;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* utilities Start */
+.title {
+  position: relative;
+  font-family: var(--primaryFont);
+  color: var(--colorBlack);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 8px;
+  background-color: var(--theme);
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin-inline: auto;
+}
+.subTitle {
+  font-family: var(--primaryFont);
+  color: var(--theme);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btnPrimary {
+  border: none;
+  background: none;
+}
+.btnPrimary a {
+  background: var(--theme);
+  padding: 16px 50px;
+  color: var(--colorWhite) !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btnPrimary a:hover {
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
+}
+.para {
+  font-family: var(--primaryFont);
+  font-weight: normal;
+  font-size: 1em;
+  color: #605d5d;
+}
+.tPara {
+  width: 60%;
+  margin: 10px auto;
+}
+.section {
+  padding: 60px 0;
+}
+/* utilities End */
+
+/* firstSection Start */
+.firstSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.firstSectionWrapper {
+  z-index: 1;
+}
+
+.firstSection .title::before {
+  display: none;
+}
+.firstSectionOverlay {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #00000074;
+}
+.firstSection .title {
+  color: var(--colorWhite);
+  margin-bottom: 0px;
+}
+.firstSvg {
+  z-index: 1;
+  position: absolute;
+  background-position: center center;
+  bottom: -1px;
+}
+.firstSection .btnPrimary {
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+/* firstSection End */
+
+/* aboutSection Start */
+
+.aboutSection {
+}
+
+.aboutContent {
+  margin-top: 80px;
+}
+.aboutImgBox {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  height: 450px;
+  margin: 0 auto;
+  width: 450px;
+}
+.aboutImgBox img {
+  width: 100%;
+  background-position: center;
+  height: 100%;
+}
+.paragraphHeader {
+  font-size: 2em;
+  font-weight: 600;
+  font-family: var(--primaryFont);
+  color: #000000c9;
+  margin-bottom: 20px;
+}
+/* aboutSection End */
+
+/* servicesSection Start */
+.servicesSection {
+  background-color: #5e5b5b;
+  margin-top: -1px;
+  min-height: 200px;
+}
+.serviceContent {
+  margin-top: 80px;
+}
+.svgCustom {
+  margin-bottom: -1px;
+}
+.servicesSection .para {
+  color: #ffffffae;
+}
+.singleService {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+.singleServiceContent {
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  margin-bottom: 20px;
+}
+.serviceTitle {
+  color: var(--colorWhite);
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: var(--primaryFont);
+}
+.serviceIcon {
+  color: var(--colorWhite);
+  font-size: 4rem;
+}
+/* servicesSection End */
+
+/* pagesSection Start */
+.pagesSection {
+  position: relative;
+}
+.pageContent {
+  margin-top: 40px;
+}
+.singlePageBox {
+  width: 90%;
+  border-radius: 8px;
+  position: relative;
+  margin: 15px auto;
+}
+.singlePageImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.pagesBoxContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  top: 0;
+  border-radius: 8px;
+  background-color: #000000b2;
+}
+.fa-file {
+  font-size: 3rem;
+  color: var(--colorWhite);
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+.boxTitle {
+  color: var(--colorWhite);
+  font-size: 1.5em;
+}
+.pagesBoxContent .para {
+  color: #ffffffb8;
+  margin-top: 20px;
+}
+.readMore a {
+  background-color: var(--colorWhite);
+  color: var(--colorBlack) !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+.readMore a:hover {
+  background-color: var(--theme);
+  color: var(--colorWhite) !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: 0.5s ease-in-out;
+}
+/* pagesSection end */
+
+@media screen and (max-width: 991px) {
+  .navbar {
+    background-color: var(--theme);
+  }
+}
+@media screen and (max-width: 767px) {
+  /* utilities Start */
+  .title {
+    font-size: 2.5rem;
+  }
+  .subTitle {
+    font-size: 1.2rem;
+  }
+  .tPara {
+    width: 100%;
+  }
+  /* utilities End */
+  /* firstSection Start */
+  .firstSection {
+    min-height: 60vh;
+  }
+  .firstSectionOverlay {
+    height: 60vh;
+  }
+  /* firstSection End */
+
+  /* aboutSection Start */
+  .aboutImgBox {
+    height: 300px;
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+  /* aboutSection End */
+
+  /* pagesSection Start */
+  .singlePageBox {
+    width: 95%;
+  }
+  /* pagesSection End */
+}
