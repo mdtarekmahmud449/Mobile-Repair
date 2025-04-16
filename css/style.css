@@ -437,12 +437,11 @@ li {
 .contactSection {
   background-color: #5e5b5b;
   min-height: 200px;
+  margin-top: -1px;
   padding-bottom: 60px;
 }
 .contactContent {
   margin-top: 80px;
-}
-.form {
 }
 .form input {
   width: 100%;
@@ -502,6 +501,7 @@ li {
 .socialMedia {
   margin-top: 40px;
   display: flex;
+  margin-bottom: 40px;
   justify-content: center;
 }
 .socialMediaList {
