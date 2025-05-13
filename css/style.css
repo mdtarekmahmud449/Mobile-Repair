@@ -26,7 +26,7 @@
 /* Navigation Section Start */
 .navbar {
   background-color: var(--theme);
-  padding: 20px 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -65,8 +65,8 @@ li {
 }
 
 .navbar-brand img {
-  width: 100px;
-  height: auto;
+  width: 160px;
+  height: 100px;
   background-position: center;
 }
 .dropdown-content a {
@@ -121,11 +121,11 @@ li {
   color: var(--colorWhite) !important;
   font-weight: 600;
   border-radius: 8px;
+  transition: 0.5s ease-in-out;
 }
 
 .btnPrimary a:hover {
   opacity: 0.9;
-  transition: 0.5s ease-in-out;
 }
 .para {
   font-family: var(--primaryFont);
@@ -151,20 +151,36 @@ li {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  align-items: center;
 }
 .firstSectionWrapper {
   z-index: 1;
+  align-items: center;
+  padding-top: 16rem;
 }
 
 .firstSection .title::before {
   display: none;
 }
+
+.firstSectionOverlay .btnPrimary a {
+  background-color: var(--colorBlack) !important;
+  transition: 0.5s ease-in-out;
+}
+.firstSectionOverlay .btnPrimary a:hover {
+  background-color: var(--colorWhite) !important;
+  color: var(--colorBlack) !important;
+  opacity: 1;
+}
+.firstSectionOverlay .subTitle {
+  color: var(--themeColor) !important;
+}
 .firstSectionOverlay {
-  height: 100vh;
+  height: 92vh;
   width: 100%;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  background-color: #00000074;
+  background-color: #000000a9;
 }
 .firstSection .title {
   color: var(--colorWhite);
@@ -213,6 +229,7 @@ li {
     0% 70%,
     0% 30%
   );
+  transition: 0.4s ease-in-out;
   height: 450px;
   margin: 0 auto;
   width: 450px;
@@ -221,6 +238,9 @@ li {
   width: 100%;
   background-position: center;
   height: 100%;
+}
+.aboutImgBox:hover {
+  scale: 1.2;
 }
 .paragraphHeader {
   font-size: 2em;
@@ -322,19 +342,7 @@ li {
 }
 
 .marquee__group p {
-  background-image: linear-gradient(
-    75deg,
-    hsl(240deg 70% 49%) 0%,
-    hsl(253deg 70% 49%) 11%,
-    hsl(267deg 70% 49%) 22%,
-    hsl(280deg 71% 48%) 33%,
-    hsl(293deg 71% 48%) 44%,
-    hsl(307deg 71% 48%) 56%,
-    hsl(320deg 71% 48%) 67%,
-    hsl(333deg 72% 48%) 78%,
-    hsl(347deg 72% 48%) 89%,
-    hsl(0deg 73% 47%) 100%
-  );
+  background-image: linear-gradient(75deg, var(--themeColor));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -396,6 +404,7 @@ li {
 /* pagesSection Start */
 .pagesSection {
   position: relative;
+  background-color: var(--themeColor);
 }
 .pageContent {
   margin-top: 40px;
@@ -448,14 +457,28 @@ li {
   border-radius: 8px;
   transition: 0.5s ease-in-out;
 }
+.pagesSection .title {
+  color: var(--colorWhite) !important;
+}
+.pagesSection .title::before {
+  background-color: var(--colorWhite);
+}
+.pagesSection .para {
+  color: #ffffffce;
+}
 /* pagesSection end */
 
 /* contactSection Start */
 .contactSection {
-  background-color: var(--themeColor);
   min-height: 200px;
   margin-top: -1px;
   padding-bottom: 60px;
+}
+.contactSection .title {
+  color: var(--themeColor);
+}
+.contactSection .title::before {
+  background-color: var(--themeColor);
 }
 .contactContent {
   margin-top: 80px;
@@ -488,10 +511,9 @@ li {
   font-family: var(--primaryFont);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   outline: none;
-  margin-bottom: 40px;
 }
 .contactDivider {
-  border-top: 4px solid #c2bbbb;
+  border-top: 2px solid var(--colorBlack);
 }
 .form input::placeholder,
 .form textarea::placeholder {
@@ -503,14 +525,14 @@ li {
   font-size: 1.2em;
   margin-top: 60px;
   font-weight: 600;
-  color: #ffffffdf;
+  color: var(--colorBlack);
 }
 .addressText {
   font-family: var(--primaryFont);
   font-size: 1.2em;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #ffffffdf;
+  color: var(--colorBlack);
 }
 .addressIcon {
   margin-right: 20px;
@@ -519,7 +541,7 @@ li {
   margin-top: 40px;
   display: flex;
   margin-bottom: 40px;
-  justify-content: center;
+  justify-content: start;
 }
 .socialMediaList {
   list-style: none;
@@ -527,11 +549,12 @@ li {
 }
 .socialMediaLink {
   font-size: 2em;
+  transition: 0.5s ease-in-out;
+  color: var(--colorBlack) !important;
   margin: 0 10px;
 }
 .socialMediaLink:hover {
-  color: var(--theme) !important;
-  transition: 0.5s ease-in-out;
+  color: var(--themeColor) !important;
 }
 /* contactSection End */
 
@@ -558,6 +581,9 @@ li {
   }
   .firstSectionOverlay {
     height: 60vh;
+  }
+  .firstSectionWrapper {
+    padding-top: 9rem;
   }
   /* firstSection End */
 
